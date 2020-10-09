@@ -1,7 +1,7 @@
 {
-  "name": "snapshot-hub",
+  "name": "stampers-server",
   "version": "0.1.2",
-  "repository": "balancer-labs/snapshot-hub",
+  "repository": "Proposal-Stampers/stampers-server",
   "license": "MIT",
   "scripts": {
     "lint": "vue-cli-service lint",
