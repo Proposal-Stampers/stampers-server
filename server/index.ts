@@ -3,7 +3,7 @@ import redis from './helpers/redis';
 import relayer from './helpers/relayer';
 import { pinJson } from './helpers/ipfs';
 import { verify, jsonParse, sendError } from './helpers/utils';
-import { sendMessage } from './helpers/discord';
+// import { sendMessage } from './helpers/discord';
 import pkg from '../package.json';
 import {
   storeProposal as redisStoreProposal,
@@ -151,7 +151,7 @@ router.post('/message', async (req, res) => {
     message += `**${msg.payload.name}**\n\n`;
     message += `${msg.payload.body}\n\n`;
     message += `<https://ipfs.fleek.co/ipfs/${authorIpfsRes}>`;
-    sendMessage(message);
+    // sendMessage(message);
   }
 
   if (msg.type === 'vote') {
