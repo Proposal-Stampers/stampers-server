@@ -21,4 +21,5 @@ export async function pinJson(key: string, body) {
   //   const result = await pinata.pinJSONToIPFS(body);
   //   return result.IpfsHash;
   // }
+  return '0x'
 }

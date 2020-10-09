@@ -1,4 +1,4 @@
-import { verifyMessage } from '@ethersproject/wallet';
+import { recoverPersonalSignature } from 'cfx-sig-util';
 
 export function jsonParse(input, fallback?) {
   try {
@@ -9,7 +9,8 @@ export function jsonParse(input, fallback?) {
 }
 
 export async function verify(address, msg, sig) {
-  const recovered = await verifyMessage(msg, sig);
+  const data = `0x${Buffer.from(msg, 'utf8').toString('hex')}`
+  const recovered = recoverPersonalSignature({ data, sig })
   return recovered === address;
 }
 
