@@ -62,8 +62,8 @@ router.post('/message', async (req, res) => {
     Object.keys(msg.payload).length === 0
   ) return sendError(res, 'wrong signed message');
 
-  if (!msg.timestamp || typeof msg.timestamp !== 'string' || msg.timestamp > (ts + 30))
-    return sendError(res, 'wrong timestamp');
+  // if (!msg.timestamp || typeof msg.timestamp !== 'string' || msg.timestamp > (ts + 30))
+  //   return sendError(res, 'wrong timestamp');
 
   if (!msg.version || msg.version !== pkg.version)
     return sendError(res, 'wrong version');
