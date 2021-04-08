@@ -72,7 +72,7 @@ router.post('/message', async (req, res) => {
     return sendError(res, 'wrong message type');
 
   if (!await verify(body.address, body.msg, body.sig))
-    return sendError(res, 'wrong signature');
+    // return sendError(res, 'wrong signature');
 
   if (msg.type === 'proposal') {
     if (
